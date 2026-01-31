@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dashboard{
+    display: grid;
+    grid-template-areas:"header header header"
+                        "sidebar main main"
+                        "sidebar widget1 widget2"
+                        "sidebar widget3 widget3";
+;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: 70px 1fr 150px 100px;
+    gap:0.5rem;
+    height: 100vh;
+    background-color: rgb(130, 141, 141);
+}
+.header{
+    grid-area: header;
+    background-color: rgb(14, 33, 73);
+    text-align: center;
+    font-size: 2rem;
+    color: #f9f9f9;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(5, 63, 74);
+    text-align: center;
+    padding: 50px;
+    font-size: 2rem;
+    color: #f9f9f9;
+}
+.main{
+    grid-area: main;
+    background-color: rgb(71, 86, 98);
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    color: #f9f9f9;
+}
+/* .main {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+} */
+.widget1{
+    grid-area: widget1;
+    background-color: rgb(45, 90, 91);
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    color: #f9f9f9;
+}
+
+.widget2{
+    grid-area: widget2;
+    background-color: rgb(45, 45, 71);
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    color: #f9f9f9;
+}
+.widget3{
+    grid-area: widget3;
+    background-color: rgb(109, 103, 95);
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+    color: #f9f9f9;
+}
+@media (max-width: 668px) {
+  .dashboard {
+    grid-template-areas: 
+      "header"
+      "sidebar"
+      "main"
+      "widget1"
+      "widget2"
+      "widget3";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
