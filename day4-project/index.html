@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Day 4: Responsive Navigation Menu</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>NavBar</h1>
+        </div>
+        <nav>
+            <ul id="Menu">
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Services</li>
+                <li>Product</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+        <div class="btn-links">
+            <button> Login</button>
+            <button> Registration</button>
+            <i class="ri-menu-line" onclick="openMenu()" id="MenuIcon"></i>
+            <i class="ri-close-circle-line" onclick="closeMenu()" id="closeIcon"></i>
+        </div>
+    </header>
+    <script src="script.js"></script>
+</body>
+
+</html>
