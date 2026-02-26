@@ -1,95 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khushi's Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khushi Pal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <div class="profile">
-            <h1> Portfolio</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <nav>
+     <div class="title">My Portfolio</div>
+    <div class="menu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+   
+  </nav>
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <h1>Khushi Pal</h1>
+    <h2> Inspired Full-Stack Developer & Future-Ready with AI Integration</h2>
+  </section>
 
-    <main>
-        <div class="Img-main">
-            <img src="image.png" alt="Khushi's photo" />
-            <div class="name">
-                <h1>khushi pal</h1>
-                <h2>Frontend Developer </h2>
+  <section class="about" id="about">
+  <div class="about-container">
+    <h1>About Me</h1>
+    <p class="intro">
+      Hi! My name is <span class="highlight">Khushi Pal</span>.
+    </p>
+    <p class="role">
+      I am a <span class="highlight">Full-Stack Developer</span> passionate about building interactive, recruiter-ready projects.
+    </p>
+    <p class="objective">
+      My objective: Challenge myself in new environments, learn continuously, and create impactful solutions with creativity and code.
+    </p>
+  </div>
+</section>
+<!-- Skills Section -->
+<section class="skills" id="skills">
+  <div class="skills-container">
+    <h1>My Skills</h1>
 
-            </div>
-        </div>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hi! I'm Khushi, a frontend developer with a passion for building clean, creative, and recruiter-ready
-                web applications. I love turning ideas into interactive user experiences using HTML, CSS, JavaScript,
-                and React.
-                <br><br>
-                Currently, I'm focused on creating real-world projects that blend design with functionality — from
-                travel planners to dashboards. I believe in writing semantic code, maintaining visual hierarchy, and
-                always learning something new.
-                <br><br>
-                My goal is to build a portfolio that not only impresses recruiters but also reflects my growth,
-                authenticity, and dedication to tech.
-            </p>
+   <div class="skill">
+  <h2>HTML</h2>
+  <div class="bar"><div class="progress html"></div></div>
+</div>
 
+<div class="skill">
+  <h2>CSS</h2>
+  <div class="bar"><div class="progress css"></div></div>
+</div>
 
-        </section>
+<div class="skill">
+  <h2>JavaScript</h2>
+  <div class="bar"><div class="progress js"></div></div>
+</div>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-            </ul>
-        </section>
+<div class="skill">
+  <h2>React</h2>
+  <div class="bar"><div class="progress react"></div></div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="contact-container">
+    <h1>Contact Me</h1>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>A web application developed using React and Node.js.</p>
-            </div>
-            <div class="project-card">
-                <h3>Travel Planner</h3>
-                <p>Weather-integrated travel app using APIs and responsive design.</p>
-            </div>
-            <div class="project-card">
-                <h3>Social Dashboard</h3>
-                <p>Interactive dashboard with charts and filters built in React.</p>
-            </div>
-        </section>
-
-        <section id="contact">
-
-            <h2>Contact</h2>
-            <p>Feel free to reach out for collaborations, opportunities, or just to connect!</p>
-
-            <ul>
-                <li>Email: <a href="mailto:palk91190@gmail.com">palk91190@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/khushi-pal-5a911937b/"
-                        target="_blank">in/khushi-dev1001
-                    </a></li>
-                <li>GitHub: <a href="https://github.com/khushipal123" target="_blank">@khushi'sCodder</a></li>
-            </ul>
-        </section>
-    </main>
+<script>
+document.querySelectorAll(".progress").forEach(bar => {
+  let width = bar.getAttribute("data-width");
+  bar.style.setProperty("--width", width + "%");
+});
+</script>
 </body>
-
 </html>
