@@ -1,14 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css">
-    <title> day5-CSS Variables Theme Switcher</title>
+    <link rel="shortcut icon" href="https://navis-grid-cohort.vercel.app/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>nsvis-grid assignment</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1 id="H1">Welecom to Day Mood</h1>
-    <button id="Change-Mood">Change-Mood</button>
-    <script src="script.js"></script>
+    <header>
+        <div class="logodiv">
+            <img src="https://navis-grid-cohort.vercel.app/logo.png" alt="">
+            <h1>Navis</h1>
+        </div>
+        <div class="manu">
+            <a href="#">Home</a>
+            <a href="#">servies</a>
+            <a href="#">About us</a>
+            <div class="arrow">
+                <a href="#">More Links</a>
+                <i class="ri-arrow-drop-down-line"></i>
+            </div>
+
+        </div>
+        <div class="button">
+            <button class="sign">sign up</button>
+            <button class="get">Get Started</button>
+            <button id="Theme-button">day/night</button>
+        </div>
+    </header>
+    <main>
+        <section id="section1">
+            <div class="about-top">
+                <h1>About our firm</h1>
+            </div>
+            <div class="about-right">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi eius tempore blanditiis,
+                    consequatur <br>praesentium aperiam reprehenderit, temporibus excepturi quod consequuntur optio quia
+                    numquam expedita <br> earum, natus voluptatibus nesciunt ab.
+                </p>
+                <button class="get">Get started </button>
+                <button class="sign">free trial</button>
+            </div>
+            <div class="benner">
+                <img src="https://navis-grid-cohort.vercel.app/couple.png" alt="">
+            </div>
+        </section>
+        <section id="section2">
+            <div class="div4">
+                <h1>95%</h1>
+                <p>Lorem ipsum <br> dolor sit.
+                </p>
+            </div>
+            <div class="div4">
+                <h1>10+</h1>
+                <p>Lorem ipsum dolor <br> sit amet.</p>
+            </div>
+            <div class="div4">
+                <h1>$10m</h1>
+                <p>Lorem ipsum dolor <br> sit amet.</p>
+            </div>
+            <div class="div4">
+                <h1>50m</h1>
+                <p>Lorem ipsum dolor <br>sit amet.</p>
+            </div>
+        </section>
+        <section id="section3">
+            <div class="about-middle">
+                <button class="about2"> ABOUT US</button>
+                <h1>Lorem ipsum dolor sit amet <br> consectetur.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis aliquam quis sequi nihil soluta
+                    ipsum in optio. Vitae est voluptate repellendus debitis! <br>Cupiditate doloribus similique earum
+                    unde veniam nisi asperiores.</p>
+            </div>
+            <div class="div-img2"><img src="https://navis-grid-cohort.vercel.app/women1.png" alt=""></div>
+        </section>
+        <section id="section4">
+            <div class="experties">
+                <button>Experties</button>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+            </div>
+            <div class="pras">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing Expedita modi sapiente molestias, optio dolor vel
+                    laudantium ratione iste veritatis nostrum!</p>
+            </div>
+        </section>
+        <section id="section5">
+            <div id="blue-card" class="card-div">
+                <div class="team-flip">
+                    <h3>Alice Johnson</h3>
+                    <h3 class="light">CEO &amp; Founder</h3>
+                </div>
+                <p>Alice has over of 15 years of experience in strategic leadership and business development</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+                </div>
+            </div>
+            <div id="img2" class="card-div">
+                <h3>Abram
+                    Culhane</h3>
+                <h4>Head of Technology</h4>
+            </div>
+            <div id="img3" class="card-div">
+                <h3>Carter Botosh</h3>
+                <h4>Chief Financial Officer</h4>
+            </div>
+            <div id="img4" class="card-div">
+                <h3>Phillip Ekstrom</h3>
+                <h4>Head of Technology<h3>Phillip Ekstrom</h3>
+                </h4>
+            </div>
+            <div id="img5" class="card-div">
+                <h3>Jakob Carder</<h4>Marketing Director</h4>
+            </div>
+            <div id="img6" class="card-div">
+                <h3>Ruben Korsgaard</h3>
+                <h4>Head of Technology</h4>
+            </div>
+            <div id="img7" class="card-div">
+                <h3>Nolan Dias</h3>
+                <h4>Marketing Director</h4>
+            </div>
+            <div id="img8" class="card-div">
+                <h3>Desirae Baptista</h3>
+                <h4>Head of Technology</h4>
+            </div>
+    </main>
+<script>
+const toggleBtn = document.getElementById('Theme-button');
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  applyTheme(savedTheme);
+}
+
+toggleBtn.addEventListener('click', () => {
+  let currentTheme = document.documentElement.getAttribute('data-theme');
+  let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  applyTheme(newTheme);
+  localStorage.setItem('theme', newTheme);
+});
+
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    document.documentElement.style.setProperty('--bg-color', '#121212');
+    document.documentElement.style.setProperty('--text-color', '#ffffff');
+    document.documentElement.style.setProperty('--primary-color', '#ff9800');
+  } else {
+    document.documentElement.style.setProperty('--bg-color', '#ffffff');
+    document.documentElement.style.setProperty('--text-color', '#000000');
+    document.documentElement.style.setProperty('--primary-color', '#007bff');
+  }
+}
+</script>
+
 </body>
+
 </html>
