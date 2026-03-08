@@ -1,0 +1,108 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Sections */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Background Images */
+
+.beans { background-image: url('https://images.pexels.com/photos/1005427/pexels-photo-1005427.jpeg'); }
+.latte { background-image: url('https://images.pexels.com/photos/3082789/pexels-photo-3082789.jpeg'); }
+.cafe { background-image: url('https://images.pexels.com/photos/2067560/pexels-photo-2067560.jpeg'); }
+
+/* Headings & Paragraphs */
+h1, h2 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px black;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-shadow: 1px 1px 5px black;
+}
+
+/* Hover effects */
+h1:hover, h2:hover {
+  color: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: #ffaa00;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  h1, h2 { font-size: 2rem; }
+  p { font-size: 1rem; }
+}
