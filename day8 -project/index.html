@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="todo-container">
+        <h1>✨ My Todo List</h1>
+
+        <div class="filters">
+            <button id="active">Active</button>
+            <button id="completed">Completed</button>
+            <button id="all" class="selected">All Todos</button>
+        </div>
+
+        <ul id="todo-list"></ul>
+
+
+        <div class="add-task">
+            <textarea id="task-input" placeholder="✍️ Write task... add #tags or 😀 emojis"></textarea>
+            <button id="add-btn">➕</button>
+        </div>
+
+
+        <div class="quick-add">
+            <button class="tag-btn">😀</button>
+            <button class="tag-btn">🔥</button>
+            <button class="tag-btn">✅</button>
+            <button class="tag-btn">#Work</button>
+            <button class="tag-btn">#Study</button>
+        </div>
+
+
+        <button id="clear-btn" class="circle-btn trash">🗑 Clear All</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
