@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    /* warm peach gradient */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    /* full screen height */
+    display: none;
+    /* hide by default */
+    justify-content: center;
+    align-items: center;
+}
+
+.section.active {
+    display: flex;
+    /* show only active section */
+}
+
+.app {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 18px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    min-height: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+h1,
+h2 {
+    margin-bottom: 20px;
+    color: #5a3e2b;
+    font-weight: 600;
+}
+
+button {
+    margin: 10px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    font-weight: bold;
+    color: #fff;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #fda085, #f6d365);
+    transform: scale(1.05);
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #fda085;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 10px;
+    width: 90%;
+    background: #fff;
+    color: #333;
+}
+
+#options button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+}
+
+.quiz-card {
+    background: #fff8f0;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-card h3 {
+    margin: 0 0 12px;
+    color: #5a3e2b;
+}
+
+.quiz-card p {
+    margin: 4px 0;
+    color: #444;
+}
+
+#timer {
+    font-weight: bold;
+    color: #d35400;
+}
+
+#scoreBox {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #5a3e2b;
+    font-size: 18px;
+}

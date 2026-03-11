@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <div class="section active" id="homePage">
+    <div class="app">
+      <h1>🧠 Quiz Challenge</h1>
+      <button onclick="showSection('addPage')">Add Questions</button>
+      <button onclick="startQuiz()">Start Quiz</button>
+      <button onclick="showSection('savedPage')">View Saved Questions</button>
+    </div>
+  </div>
+
+  
+  <div class="section" id="addPage">
+    <div class="app">
+      <h2>Add Question</h2>
+      <input type="text" id="questionInput" placeholder="Enter question">
+      <input type="text" id="optionA" placeholder="Option A">
+      <input type="text" id="optionB" placeholder="Option B">
+      <input type="text" id="optionC" placeholder="Option C">
+      <input type="text" id="optionD" placeholder="Option D">
+      <input type="text" id="answerInput" placeholder="Correct Answer (A/B/C/D)">
+      <button onclick="addQuestion()">Save Question</button>
+      <button onclick="showSection('homePage')">Back</button>
+    </div>
+  </div>
+
+  
+  <div class="section" id="quizPage">
+    <div class="app">
+      <h2 id="quizQuestion"></h2>
+      <div id="options"></div>
+      <p id="timer">⏳ Time Left: 20s</p>
+      <button onclick="skipQuestion()">Skip</button>
+      <p id="scoreBox">Score: 0</p>
+      <button onclick="showSection('homePage')">Back</button>
+    </div>
+  </div>
+
+
+  <div class="section" id="savedPage">
+    <div class="app">
+      <h2>Saved Questions</h2>
+      <div id="savedList"></div>
+      <button onclick="showSection('homePage')">Back</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
