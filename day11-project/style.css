@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #1a1c1f;
+  color: #f2efef;
+}
+
+input {
+  padding: 8px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  background: #446689;
+  color: rgb(243, 236, 236);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #180673;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+#profile {
+  margin-top: 20px;
+}
+
+#profile img {
+  width: 120px;
+  border-radius: 50%;
+}
