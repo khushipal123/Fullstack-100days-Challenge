@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to top, #071a3d, #2a5298);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: rgba(165, 94, 94, 0.26);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  color: white;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  background: transparent;
+  color: white;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #00c6ff;
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.toggle-eye:hover {
+  transform: scale(1.2);
+}
+
+
+.error {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: 5px;
+  animation: shake 0.3s ease;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.options a {
+  color: #00c6ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.options a:hover {
+  color: #37ff00;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+
+.register-link {
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.register-link a {
+  color: #00c6ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #00ff04;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
